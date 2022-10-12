@@ -1,0 +1,22 @@
+/* @import '~bootstrap/dist/css/bootstrap.css' */
+.div1{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.h3{
+    text-align: center;
+}
+input{
+    border-radius: 50px;
+}
+button{
+    border-radius: 50px;
+}
+.card{
+    background-color: rgb(13, 95, 116);
+    border-radius: 50px;
+}
+.card2{
+    background-color: rgb(7, 82, 40);
+    border-radius: 50px;
+}

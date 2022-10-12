@@ -1,0 +1,36 @@
+<div class="container shadow p-5">
+    <button mat-button mat-raised-button color="primary">Login</button>
+    <button mat-button mat-raised-button color="accent">Login</button>
+    <button mat-button mat-raised-button color="warn">Login</button>
+    <button mat-button mat-raised-button style="background-color: black; color:white;">Login</button>
+        <mat-card>HELLO</mat-card>
+    <button mat-button mat-raised-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button mat-fab color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <br>
+    <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Legacy form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <br>
+      <mat-form-field appearance="standard">
+        <mat-label>Standard form field</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+      <br>
+      <button mat-button mat-stroked mat-raised-button color="warn" (click)="openBottomSheet()">Open</button>
+
+      <input type="text" class="form-control mb-2" [(ngModel)]="todo_name" placeholder="Todo Title">
+      <input type="text" class="form-control mb-2" [(ngModel)]="todo_desc" placeholder="Todo Description">
+      <button class="btn btn-outline-primary" (click)="addTodo()">Add Todo</button>
+      <!-- <button mat-button mat-raised-button color="warn" (click)="OpenBottomSheet()">Open</button> -->
+</div>

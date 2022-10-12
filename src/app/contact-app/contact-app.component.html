@@ -1,0 +1,56 @@
+
+<div class="container">
+      <div class="row">
+          <div class="col-5 mx-auto shadow bg-light">
+              <div>
+                  <h5 class="display-4">Add Contact App</h5>
+                  <p class=text-dark>{{message}}</p>
+                  <input type="text" class="form-control mb-2" placeholder="Full name" [(ngModel)]="full_name">
+                  <input type="text" class="form-control mb-2" placeholder="Email" [(ngModel)]="email">
+                  <input type="text" class="form-control mb-2" placeholder="Phone Number" [(ngModel)]="phone_number">
+                  <input type="text" class="form-control mb-2" placeholder="Address" [(ngModel)]="address">
+                  <input type="text" class="form-control mb-2" placeholder="Relationship" [(ngModel)]="relationship">
+                  <button class="btn btn-outline-success mb-2" (click)="createContact()">Create Contact</button>
+                  <button class="btn btn-outline-success mb-2" routerLink="/contacts">View Contact</button>
+                  <p>{{message}}</p>
+              </div>
+          </div>
+          <div class="col-7" *ngIf="contact_array.length != 0">
+              <div class="shadow">
+          
+                          <input type="text" placeholder="search here..." [(ngModel)]="searchContact">
+                          <div *ngFor="let id = index ;let contact of contact_array | contactfilter:searchContact">
+                              <div class="row shadow pb-3"></div>
+                              <div class="col-3">{{ contact.full_name }}</div >    
+                              <td>
+                                  <button class="btn btn-primary" routerLink="contact/id">View</button> &nbsp; 
+                                  <button class="btn btn-success" (click)="edit(id,contact)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td> 
+                              <td><button class="btn btn-danger" (click)="delete(id)">Delete</button></td>
+                              
+                          <div>
+              </div>
+        </div>
+        
+        <!-- Button trigger modal -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <input type="text" class="form-control mb-2" placeholder="Full name" [(ngModel)]="full_name">
+                <input type="text" class="form-control mb-2" placeholder="Email" [(ngModel)]="email">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>        
+    </div>
+</div>

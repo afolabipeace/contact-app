@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="container"><br><br>
+       <div class="row">
+        <div class="col-3 p-3 text-dark shadow mx-auto" *ngFor="let index = index; let contact of detailsArray">
+            <div >
+                <p (click)="viewDetails(contact)" style="cursor:pointer;">{{contact.full_name}}</p>
+                <p>{{contact.phone_number }}</p>
+            </div>
+        </div>
+        <div class="shadow col-4 mx-auto text-light" style="background-color:rgb(68, 4, 4);"><br><br><br>
+            <app-siblings></app-siblings>
+        </div>
+       </div>
+    </div> -->
+
+
+
+    <div class="container">
+        <div class="row">
+            <div id="col" class="col-3 mx-auto" >
+                <div class="mx-auto shadow p-2" *ngFor="let index = index; let contact of detailsArray">
+                    <p (click)="viewDetails(contact)" style="cursor:pointer;">{{contact.full_name}}</p>
+                    <p>{{contact.phone_number }}</p>
+                </div>
+            </div>
+            <div class="col-7">
+                <app-siblings></app-siblings>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h6 class="text-center display-5 text-info">I'm the Child</h6>
+<p>Coming from parent:  {{sendToChild}}</p>
+
+<hr>
+
+<input type="text" placeholder="Message Here..." class="form-control mb-2" [(ngModel)]="msgToParent" (keyup)="emitToParent()">

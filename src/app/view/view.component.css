@@ -1,0 +1,4 @@
+#col{
+    /* (blue, white, blue) */
+    background: linear-gradient(rgb(0, 255, 42), white, rgb(0, 255, 26));
+}

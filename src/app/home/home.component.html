@@ -1,0 +1,97 @@
+ <!-- <div class=" div1 row " >
+    <div class='col-lg-3 col-sm-5 col-md-5'>
+        <div class="card card2" >
+            <div class="card-body">
+                <form class='form-group'>
+                    <div class="card-title">
+                        <h3  class="text-primary h3">SignUp</h3>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id='floatingInput' placeholder='Firstname'  class='my-1 form-control input' />
+                        <label htmlFor="" class='floatingInput'>Firstname</label>
+                    </div>
+                    <div>
+                        <div class="form-floating">
+                            <input type="text" placeholder='full Name' name='fullname' class='my-2 form-control' />
+                            <label htmlFor="" class='floatingInput'>Lastname</label>
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" name='username' placeholder='Email' class='my-2 form-control' />
+                        <label htmlFor="" class='floatingInput'>Email</label>
+                    </div>
+                    <div  class="form-floating">
+                        <input type="password" placeholder='Password' name='password' class='my-2 form-control' />
+                        <label htmlFor="" class='floatingInput'>Phone Number</label>
+                    </div>
+                    <div class="form-floating">
+                         <input type="password" id='floatingInput' placeholder='Password' class='my-1 form-control' />
+                        <label htmlFor="" class='floatingInput'>Password</label>
+                    </div>
+                    <button type='submit' class='btn btn-secondary my-2 w-100' >SignUp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class=' col-lg-3 col-sm-5 col-md-5'>
+        <div class="card" >
+            <div class="card-body">
+                <form class='form-group'>
+                    <div class="card-title">
+                        <h3 style="text-align: center;" class="text-info">SignIn</h3>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" id='floatingInput' placeholder='Email' class='my-1 form-control' />
+                        <label htmlFor="" class='floatingInput'>Email</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" id='floatingInput' placeholder='Password' class='my-1 form-control' />
+                        <label htmlFor="" class='floatingInput'>Password</label>
+                    </div>
+                    <div  class="form-floating">
+                        <input type="password" placeholder='Password' name='password' class='my-2 form-control' />
+                        <label htmlFor="" class='floatingInput'>Phone Number</label>
+                    </div>
+                    <button type='submit' class='btn btn-primary my-2 w-100' >SignIn</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg bg-dark text-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <a class="nav-link active text-light" aria-current="page" routerLink="/home">Home</a>
+            <a class="nav-link active text-light" aria-current="page" routerLink="/signup">Signup</a>
+            <a class="nav-link active text-light" aria-current="page" routerLink="/signin">SignIn</a>
+    </ul>
+</div>
+</div>
+</nav>
+
+<div class="text-center">
+    <div class="row bg-dark text-light">
+        <div class="shadow mx-auto col-6">
+            <h1 class="display-4 text-center">WELCOME HOME</h1>
+            <p>{{ 'money' | uppercase}}</p>
+            <p>{{ 'MONEY' | uppercase}}</p>
+            <!-- currency, currency:symbol,currency:symbol-narrow -->
+            <p>{{ 1200.50 | currency:'NGN': 'symbol-narrow'}}</p> 
+            <p>{{date | date : 'shortTime'}}</p>
+            <p>{{date | date}}</p>
+            <p>{{date | date : 'd/M/y'}}</p>
+            <p>{{'WELCOME' | slice : 0:3}}</p>
+            <div *ngFor="let name of arrayNames">
+                <p class="text-center text-muted display-6">{{name | changecase}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- FOR NIGERIA -->
+<!-- <p>{{ 1200.50 | currency:'NGN': 'symbol-narrow'}}</p> -->
