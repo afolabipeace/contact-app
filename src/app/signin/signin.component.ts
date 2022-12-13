@@ -25,7 +25,7 @@ export class SigninComponent implements OnInit {
     let users = this.usersArray.find((user:any)=>user.email == this.email && user.password == this.password)
     if(users){
       localStorage.setItem('contactUser', JSON.stringify(users));
-      this.router.navigate(['/contact-app'])
+      this.router.navigate(['/contact'])
     }else{
       this.router.navigate(['/signup'])
     }

@@ -11,7 +11,6 @@
                   <input type="text" class="form-control mb-2" placeholder="Address" [(ngModel)]="address">
                   <input type="text" class="form-control mb-2" placeholder="Relationship" [(ngModel)]="relationship">
                   <button class="btn btn-outline-success mb-2" (click)="createContact()">Create Contact</button>
-                  <button class="btn btn-outline-success mb-2" routerLink="/contacts">View Contact</button>
                   <p>{{message}}</p>
               </div>
           </div>
@@ -38,18 +37,42 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <input type="text" class="form-control mb-2" placeholder="Full name" [(ngModel)]="full_name">
+                <input type="text" class="form-control mb-2" placeholder="Email" [(ngModel)]="email">
+                <input type="text" class="form-control mb-2" placeholder="Phone Number" [(ngModel)]="phone_number">
+                <input type="text" class="form-control mb-2" placeholder="Address" [(ngModel)]="address">
+                <input type="text" class="form-control mb-2" placeholder="Relationship" [(ngModel)]="relationship">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="update()">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <input type="text" class="form-control mb-2" placeholder="Full name" [(ngModel)]="full_name">
                 <input type="text" class="form-control mb-2" placeholder="Email" [(ngModel)]="email">
+                <input type="text" class="form-control mb-2" placeholder="Phone Number" [(ngModel)]="phone_number">
+                <input type="text" class="form-control mb-2" placeholder="Address" [(ngModel)]="address">
+                <input type="text" class="form-control mb-2" placeholder="Relationship" [(ngModel)]="relationship">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"(click)="update()">Save changes</button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>        
     </div>

@@ -12,6 +12,9 @@ export class ContactListComponent implements OnInit {
     public contact_array:any = [];
     public full_name = "";
     public email = "";
+    public phone_no = "";
+    public relationship = "";
+    public address = "";
     public id = '';
 
   ngOnInit(): void {
@@ -21,6 +24,9 @@ export class ContactListComponent implements OnInit {
   edit(id:any, contact:any) {
     this.full_name = contact.full_name;
     this.email = contact.email;
+    this.phone_no = contact.phone_no;
+    this.address = contact.address;
+    this.relationship = contact.relationship;
     this.id = id;
   }
   
@@ -29,6 +35,9 @@ export class ContactListComponent implements OnInit {
       if(index == this.id){
         contact.full_name = this.full_name;
         contact.email = this.email;
+       contact.phone_no  = this.phone_no;
+        contact.address= this.address ;
+        contact.relationship = this.relationship;
       }
     })
     localStorage.setItem('contacts', JSON.stringify(this.contact_array))

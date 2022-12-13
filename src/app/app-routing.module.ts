@@ -25,9 +25,9 @@ const routes: Routes = [
   {path: '', component:SidenavComponent, children:[
     {path: "dashboard", component:DashboardComponent},
     {path: 'api', component:ApiComponent},
-    {path: "nav", component:SidenavComponent},
+    {path: "dashboard", component:DashboardComponent},
   {path: 'api/:name', component:UserProfileComponent },
-  {path: 'contact',children:[
+  {path: 'contact', children:[
     {path:'', component: ContactAppComponent},
     {path:'contact/:id',component:ViewComponent}
   ], canActivate:[ContactGuard]},
