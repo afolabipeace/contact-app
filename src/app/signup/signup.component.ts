@@ -42,7 +42,7 @@ export class SignupComponent implements OnInit {
     localStorage.setItem("userDetails",JSON.stringify(this.usersArray));
     alert('Sigup Successfully')
     localStorage.setItem("contactUser", JSON.stringify(this.userForm.value));
-    this.router.navigate(['/contact-app']);
+    this.router.navigate(['/contact']);
     }else{
       this.message = 'This Email has already exist. Please signup '
     }
